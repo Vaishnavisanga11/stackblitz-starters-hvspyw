@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 
@@ -9,10 +9,10 @@ import { HEROES } from '../mock-heroes';
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
-  imports: [CommonModule, FormModule],
+  imports: [CommonModule, FormsModule],
 })
 export class HeroesComponent implements OnInit {
-  @input() hero!: Hero;
+  @Input() hero!: Hero;
 
   constructor() {}
 
