@@ -15,6 +15,9 @@ export class HeroesComponent implements OnInit {
   @Input() hero!: Hero;
 
   constructor() {}
+  getEven() {
+    return this.hero.id % 2 != 0;
+  }
 
   ngOnInit() {}
 }
