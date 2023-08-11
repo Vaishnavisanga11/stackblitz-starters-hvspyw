@@ -12,11 +12,12 @@ import { HEROES } from '../mock-heroes';
   imports: [CommonModule, FormsModule],
 })
 export class HeroesComponent implements OnInit {
-  @Input() hero!: Hero;
+  heroes = HEROES;
+  selectedHero?: Hero;
 
   constructor() {}
-  getEven() {
-    return this.hero.id % 2 != 0;
+  onSelect(hero: Hero) {
+    this.selectedHero = hero;
   }
 
   ngOnInit() {}
